@@ -1,0 +1,29 @@
+uuid: 854e2750-556a-42b1-9835-a537d53fd43e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hashtags
+    - node.type.page
+    - taxonomy.vocabulary.hashtags
+id: node.page.field_hashtags
+field_name: field_hashtags
+entity_type: node
+bundle: page
+label: Hashtags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hashtags: hashtags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

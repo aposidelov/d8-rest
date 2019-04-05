@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bt_card_theme() {
+    return [
+        'bt_card_list_form' => [
+            'render element' => 'form',
+            'template' => 'bt-card-table',
+        ],
+        'bt_card_view' => [
+            'render element' => 'elements',
+            'template' => 'card-view',
+        ],
+    ];
+}
+
+/**
+ * Implements hook_preprocess_bt_card_list_form().
+ */
+function bt_card_preprocess_bt_card_list_form(&$variables) {
+    //dsm('sss');
+}
+
+/**
+ * Implements hook_preprocess_bt_card_view().
+ */
+function bt_card_preprocess_bt_card_view(&$variables) {
+    //kint($variables);
+    $card = &$variables['elements']['card']['#value'];
+    $variables['title'] = $card->title;
+    $variables['price'] = $card->price;
+    $variables['sku'] = $card->sku;
+    $variables['ajax_link'] = $variables['elements']['ajax_link'];
+    $variables['extra_values'] = array( 'key1' => t('Item 1'),
+                                        'key2' => t('Item 2'),
+                                        'key3' => t('Item 3'));
+}

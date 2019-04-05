@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bt_product_theme() {
+    return [
+        'bt_product_simple_form' => [
+            'render element' => 'form',
+            'template' => 'simple-form',
+        ],
+    ];
+}
+
+/**
+ * Implements hook_preprocess_bt_product_view().
+ */
+/*function bt_product_preprocess_bt_product_view(&$variables) {
+    //kint($variables);
+    $item = &$variables['elements']['bt_product']['#value'];
+    $variables['title'] = $item->title;
+    $variables['price'] = $item->price;
+    $variables['sku'] = $item->sku;
+    $variables['ajax_link'] = $variables['elements']['ajax_link'];
+    $variables['extra_values'] = array( 'key1' => t('Item 1'),
+                                        'key2' => t('Item 2'),
+                                        'key3' => t('Item 3'));
+}*/

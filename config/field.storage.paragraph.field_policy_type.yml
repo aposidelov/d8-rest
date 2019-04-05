@@ -1,0 +1,36 @@
+uuid: 0a532cc6-9a4d-4b27-af36-3bc4e454ec2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_policy_type
+field_name: field_policy_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Commercial General Liability'
+      label: 'Commercial General Liability'
+    -
+      value: 'Automobile Liability'
+      label: 'Automobile Liability'
+    -
+      value: 'Umbrella Liability'
+      label: 'Umbrella Liability'
+    -
+      value: 'Workers Compensation Liability'
+      label: 'Workers Compensation Liability'
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

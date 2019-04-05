@@ -1,0 +1,16 @@
+entity.bt_product.collection:
+  title: 'BT Product'
+  route_name: entity.bt_product.collection
+  parent: system.admin_config_development
+  description: 'List bt products'
+bt_product.admin.structure.settings:
+  title: 'Bt Product settings'
+  description: 'Configure bt product entity'
+  route_name:  bt_product.bt_product_settings
+  parent: system.admin_structure
+bt_product.simple_form:
+  title: 'BT Product simple form'
+  description: 'BT Product Simple form description'
+  parent: system.admin_config_development
+  route_name: bt_product.simple_form
+  weight: 100

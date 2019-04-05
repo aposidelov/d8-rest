@@ -1,0 +1,18 @@
+my_product.list:
+  title: 'My Product: List of Products'
+  description: 'My Product of Lists'
+  parent: system.admin_config_development
+  route_name: my_product.list
+  weight: 100
+my_product.list_drag:
+  title: 'My Product: List of Draggable Products'
+  description: 'My Product of Draggable List'
+  parent: system.admin_config_development
+  route_name: my_product.list_drag
+  weight: 100
+my_product.add_form:
+  title: 'My Product: Add New Product'
+  description: 'Allows to add new product'
+  parent: system.admin_config_development
+  route_name: my_product.add_form
+  weight: 101

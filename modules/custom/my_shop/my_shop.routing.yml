@@ -1,0 +1,23 @@
+my_shop.cart:
+  path: '/cart'
+  defaults:
+    _controller: '\Drupal\my_shop\Controller\CartController::cart'
+    _title: 'Cart'
+  requirements:
+    _permission: 'access content'
+
+my_shop.settings:
+  path: '/shop_settings'
+  defaults:
+    _form: 'Drupal\my_shop\Form\MyShopSettingsForm'
+    _title: 'Shop Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+my_shop.remove_product_form:
+  path: '/remove_product'
+  defaults:
+    _form: 'Drupal\my_shop\Form\RemoveProductForm'
+    _title: 'Remove Product'
+  requirements:
+    _permission: 'administer site configuration'

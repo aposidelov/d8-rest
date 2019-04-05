@@ -1,0 +1,117 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_update_8002().
+ */
+function my_product_update_8002() {
+  $spec = array(
+    'type' => 'int',
+    'description' => 'Weight column',
+    'length' => 20,
+    'default' => 0,
+    'not null' => FALSE,
+  ); 
+  $schema = Database::getConnection()->schema();
+  $schema->addField('my_product', 'weight', $spec);
+
+  return t('Weight field has been added to my_product table');
+}
+
+/**
+ * Implements hook_install().
+ *
+ * Creates some default entries on this module custom table.
+ *
+ * @see hook_install()
+ * @ingroup dbtng_example
+ */
+function my_product_install() {
+  // Add a default entry.  
+  $fields = array(
+    'title' => 'iPhone 4',
+    'sku' => 'f21334123',
+    'price' => 4300,
+  );
+  db_insert('my_product')
+      ->fields($fields)
+      ->execute();
+
+  // Add another entry.
+  $fields = array(
+    'title' => 'Nokia 110 A',
+    'sku' => 'f71442412',
+    'price' => 2750,
+    'uid' => 1,
+  );
+  db_insert('my_product')
+      ->fields($fields)
+      ->execute();
+
+  // Add another entry.
+  $fields = array(
+    'title' => 'iPhone 5.0',
+    'sku' => 'f7133412',
+    'price' => 4750,
+    'uid' => 1,
+  );
+  db_insert('my_product')
+      ->fields($fields)
+      ->execute();  
+}
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ * @ingroup my_product
+ */
+function my_product_schema() {
+  $schema['my_product'] = array(
+    'description' => 'Stores shop products for learning purposes',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique product ID',
+      ),
+      'uid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator user's {users}.uid",
+      ),
+      'title' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Product title',
+      ),
+      'price' => array(
+        'type' => 'int',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Price',
+      ),
+      'sku' => array(
+        'type' => 'varchar',
+        'length' => 16,
+        'default' => '',        
+        'description' => 'Product sku',
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'title' => array('title'),      
+    ),
+  );
+
+  return $schema;
+}
+
+?>

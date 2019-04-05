@@ -1,0 +1,25 @@
+bt_custom.simple_page:
+  path: '/bt_custom/simple_page'
+  defaults:
+    _controller: '\Drupal\bt_custom\Controller\Controller::simplePage'
+    _title: 'BT Custom simple page'
+  requirements:
+    _permission: 'administer site configuration'
+bt_custom.simple_form:
+  path: '/bt_custom/simple_form'
+  defaults:
+    _form: 'Drupal\bt_custom\Form\SimpleForm'
+    _title: 'BT Custom simple form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+bt_custom.settings_form:
+  path: '/bt_custom/settings'
+  defaults:
+    _form: 'Drupal\bt_custom\Form\SettingsForm'
+    _title: 'BT BT Custom Settings'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer site configuration'

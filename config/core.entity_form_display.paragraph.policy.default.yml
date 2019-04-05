@@ -1,0 +1,46 @@
+uuid: ed235a0b-b6fa-4518-bd24-1e1d93b7a246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.policy.field_active_range
+    - field.field.paragraph.policy.field_expiration_date
+    - field.field.paragraph.policy.field_policy_effective_date
+    - field.field.paragraph.policy.field_policy_type
+    - paragraphs.paragraphs_type.policy
+  module:
+    - datetime
+    - datetime_range
+id: paragraph.policy.default
+targetEntityType: paragraph
+bundle: policy
+mode: default
+content:
+  field_active_range:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_expiration_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_policy_effective_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_policy_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

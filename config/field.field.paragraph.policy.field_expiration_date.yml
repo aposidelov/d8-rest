@@ -1,0 +1,21 @@
+uuid: fd43ce91-e98c-41e2-b8cb-4919da2c642e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_expiration_date
+    - paragraphs.paragraphs_type.policy
+  module:
+    - datetime
+id: paragraph.policy.field_expiration_date
+field_name: field_expiration_date
+entity_type: paragraph
+bundle: policy
+label: 'Expiration Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

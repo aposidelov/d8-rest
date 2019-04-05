@@ -1,0 +1,31 @@
+uuid: a3003683-a726-429d-bbe2-689bc467ce02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policies
+    - node.type.contractor
+    - paragraphs.paragraphs_type.policy
+  module:
+    - entity_reference_revisions
+id: node.contractor.field_policies
+field_name: field_policies
+entity_type: node
+bundle: contractor
+label: Policies
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      policy: policy
+    target_bundles_drag_drop:
+      policy:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

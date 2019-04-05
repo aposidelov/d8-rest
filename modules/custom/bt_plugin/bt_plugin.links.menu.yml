@@ -1,0 +1,10 @@
+bt_plugin.description:
+  title: Bt Plugin Type
+  route_name: bt_plugin.description
+
+bt_plugin.simple_form:
+  title: 'BT Plugin simple form'
+  description: 'BT Plugin Simple form description'
+  parent: system.admin_config_development
+  route_name: bt_plugin.simple_form
+  weight: 100

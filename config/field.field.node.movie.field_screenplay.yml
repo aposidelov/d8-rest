@@ -1,0 +1,25 @@
+uuid: 2836c714-3694-4bd9-8d4f-637c124a9339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_screenplay
+    - node.type.movie
+id: node.movie.field_screenplay
+field_name: field_screenplay
+entity_type: node
+bundle: movie
+label: Screenplay
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: person_admin
+      display_name: entity_reference_4
+      arguments: {  }
+field_type: entity_reference

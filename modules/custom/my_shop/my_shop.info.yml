@@ -1,0 +1,6 @@
+name: My Shop
+description: Drupal 8 first custom module
+package: Custom
+type: module
+version: 1.0
+core: 8.x

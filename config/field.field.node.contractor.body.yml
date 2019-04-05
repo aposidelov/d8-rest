@@ -1,0 +1,22 @@
+uuid: ac9ffe68-139a-4958-bcb6-4fd2312a7e63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.contractor
+  module:
+    - text
+id: node.contractor.body
+field_name: body
+entity_type: node
+bundle: contractor
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

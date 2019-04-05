@@ -1,0 +1,18 @@
+uuid: a2b61767-7450-4128-b3c0-6f4efd04dd42
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Contractor
+type: contractor
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

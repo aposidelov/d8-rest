@@ -1,0 +1,22 @@
+{#{ kint() } #}
+<div class="card">
+    <dl>
+        <dt>{{ 'Ajax link'|placeholder }}</dt>
+        <dd>{{ ajax_link }}</dd>
+        <dt>{{ 'Title'|placeholder }}</dt>
+        <dd>{{ title }}</dd>
+        {% if price != 0 %}
+            <dt>{{ 'Price'|t }}</dt>
+            <dd><span style="color:{% if price > 0 %}{{ 'green' }}{% else %} {{ 'red' }} {% endif %}">{{  price }}</span></dd>
+        {% endif %}
+        <dt>{% trans %}Sku{% endtrans %}</dt>
+        <dd>{{ sku }}</dd>
+        {% if extra_values is defined and extra_values|length > 0  %}
+        <ul>
+            {% for value in extra_values %}
+                <li class="{{ cycle(['odd', 'even'], loop.index0) }}">{{ value }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </dl>
+</div>

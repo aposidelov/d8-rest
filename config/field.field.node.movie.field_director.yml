@@ -1,0 +1,25 @@
+uuid: 01b04a4b-a05a-491b-b891-001e257ce2c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director
+    - node.type.movie
+id: node.movie.field_director
+field_name: field_director
+entity_type: node
+bundle: movie
+label: Director
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: person_admin
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

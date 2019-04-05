@@ -1,0 +1,18 @@
+bt_custom.simple_form:
+  title: 'BT Custom simple form'
+  description: 'BT Custom Simple form description'
+  parent: system.admin_config_development
+  route_name: bt_custom.simple_form
+  weight: 100
+bt_custom.simple_page:
+  title: 'BT Custom simple page'
+  description: 'BT Custom Simple page description'
+  parent: system.admin_config_development
+  route_name: bt_custom.simple_page
+  weight: 101
+bt_custom.settings_form:
+  title: 'BT Custom Settings'
+  description: 'Allows to manage BT Custom settings'
+  parent: system.admin_config_development
+  route_name: bt_custom.settings_form
+  weight: 102

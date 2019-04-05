@@ -1,0 +1,18 @@
+uuid: b2101c5e-19b3-4760-97c4-ab47ca73d50e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.person
+id: node.person.title
+field_name: title
+entity_type: node
+bundle: person
+label: 'Full Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

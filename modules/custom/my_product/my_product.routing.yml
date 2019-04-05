@@ -1,0 +1,37 @@
+my_product.list:
+  path: '/my_product/list'
+  defaults:
+    _controller: '\Drupal\my_product\Controller\ProductController::productsList'
+    _title: 'Product list'
+  requirements:
+    _permission: 'administer site configuration'
+my_product.list_drag:
+  path: '/my_product/list_drag'
+  defaults:
+    _form: 'Drupal\my_product\Form\ProductListForm'
+    _title: 'Product drag-and-drop list'
+  requirements:
+    _permission: 'administer site configuration'    
+  options:
+    _admin_route: TRUE
+my_product.add_form:
+  path: '/my_product/add'
+  defaults:
+    _form: 'Drupal\my_product\Form\ProductAddForm'
+    _title: 'Add New Product'
+  requirements:
+    _permission: 'administer site configuration'
+my_product.edit_form:
+  path: '/my_product/{id}/edit'
+  defaults:
+    _form: 'Drupal\my_product\Form\ProductEditForm'
+    _title: 'Edit Product'
+  requirements:
+    _permission: 'administer site configuration'
+my_product.delete_form:
+  path: '/my_product/{id}/delete'
+  defaults:
+    _form: 'Drupal\my_product\Form\ProductDeleteForm'
+    _title: 'Delete Product'
+  requirements:
+    _permission: 'administer site configuration'

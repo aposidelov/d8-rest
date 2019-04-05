@@ -1,0 +1,21 @@
+uuid: 349c6622-f163-4884-adf5-ac3a447fa01c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_policy_type
+    - paragraphs.paragraphs_type.policy
+  module:
+    - options
+id: paragraph.policy.field_policy_type
+field_name: field_policy_type
+entity_type: paragraph
+bundle: policy
+label: 'Policy type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,72 @@
+uuid: 76e50dcc-ad0b-4cb2-8c89-9bce1687aefc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.feeds_item
+    - field.field.node.person.field_birth
+    - field.field.node.person.field_death
+    - field.field.node.person.field_genres
+    - field.field.node.person.field_image
+    - field.field.node.person.field_position
+    - image.style.thumbnail
+    - node.type.person
+  module:
+    - datetime
+    - image
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_birth:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_death:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_genres:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_position:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  feeds_item: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

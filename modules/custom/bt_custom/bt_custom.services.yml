@@ -1,0 +1,14 @@
+parameters:
+  shower_params:
+    awesome_key: 'awesome_value'
+    another_awesomeness: 1234567
+    deep_example:
+      first_level: true
+      second_level: ['wow', 'such flexible']
+services:
+  bt_custom.noticer:
+        class: Drupal\bt_custom\Service\Noticer
+        arguments: ['@messenger']
+  bt_custom.shower:
+      class: Drupal\bt_custom\Service\Shower
+      arguments: ['@bt_custom.noticer', '@current_user', '@string_translation', '%shower_params%']

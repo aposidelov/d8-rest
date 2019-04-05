@@ -1,0 +1,11 @@
+# All action links for this module
+
+bt_product.bt_product_add:
+  # Which route will be called by the link
+  route_name: bt_product.bt_product_add
+  title: 'Add bt product'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.bt_product.collection
+    - entity.bt_product.canonical

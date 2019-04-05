@@ -1,0 +1,8 @@
+uuid: 8ef0de12-fbd7-4f4f-a975-8ba1274c6477
+langcode: en
+status: true
+dependencies: {  }
+id: person_birth_date
+label: 'Person birth date'
+locked: false
+pattern: 'F j, Y'

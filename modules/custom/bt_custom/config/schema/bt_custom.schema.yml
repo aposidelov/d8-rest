@@ -1,0 +1,10 @@
+bt_custom.settings:
+  type: config_object
+  label: 'BT Custom Settings'
+  mapping:
+    cards_per_page:
+      type: number
+      label: 'Cards per page'
+    help_message:
+      type: label
+      label: 'Help message for user'

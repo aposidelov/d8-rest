@@ -1,0 +1,8 @@
+simple_form1:
+  version: 1.0
+  js:
+    bt_rest_json.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

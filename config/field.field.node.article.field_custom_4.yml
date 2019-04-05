@@ -1,0 +1,26 @@
+uuid: 1fca0ca0-16d0-4a5c-9dc4-823f67a03cfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_4
+    - node.type.article
+  module:
+    - hashtags
+    - text
+third_party_settings:
+  hashtags:
+    hashtags_activate: true
+id: node.article.field_custom_4
+field_name: field_custom_4
+entity_type: node
+bundle: article
+label: 'Custom 4'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

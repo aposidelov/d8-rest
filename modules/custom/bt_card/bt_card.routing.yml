@@ -1,0 +1,70 @@
+bt_card.list:
+  path: '/bt_card/list'
+  defaults:
+    _controller: '\Drupal\bt_card\Controller\CardController::cardList'
+    _title: 'Cards'
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.card_view:
+  path: '/bt_card/{id}/view'
+  defaults:
+    _controller: '\Drupal\bt_card\Controller\CardController::cardView'
+    _title_callback: '\Drupal\bt_card\Controller\CardController::title'
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.ajax_link_callback:
+  path: '/bt_card/ajax-link/{id}/{nojs}'
+  defaults:
+    _controller: '\Drupal\bt_card\Controller\CardController::ajaxLinkCallback'
+    nojs: 'nojs'
+  requirements:
+    _permission: 'administer site configuration'
+    id: ^\d+$
+bt_card.list_drag:
+  path: '/bt_card/list_drag'
+  defaults:
+    _form: 'Drupal\bt_card\Form\ListForm'
+    _title: 'Cards drag-and-drop'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+bt_card.settings_form:
+  path: '/bt_card/settings'
+  defaults:
+    _form: 'Drupal\bt_card\Form\SettingsForm'
+    _title: 'BT Card Settings'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.add_form:
+  path: '/bt_card/add'
+  defaults:
+    _form: 'Drupal\bt_card\Form\AddForm'
+    _title: 'Add New Card'
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.modal_add_form:
+  path: '/bt_card/modal/add/{nojs}'
+  defaults:
+    _form: 'Drupal\bt_card\Form\ModalAddForm'
+    _title: 'Add New Card'
+    nojs: ajax
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.edit_form:
+  path: '/bt_card/{id}/edit'
+  defaults:
+    _form: 'Drupal\bt_card\Form\EditForm'
+    _title: 'Edit Card'
+  requirements:
+    _permission: 'administer site configuration'
+bt_card.delete_form:
+  path: '/bt_card/{id}/delete'
+  defaults:
+    _form: 'Drupal\bt_card\Form\ConfirmDeleteForm'
+    _title: 'Delete Card'
+  requirements:
+    _permission: 'administer site configuration'
+    id: ^\d+$

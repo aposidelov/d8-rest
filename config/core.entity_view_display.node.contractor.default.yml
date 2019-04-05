@@ -1,0 +1,39 @@
+uuid: 31b9320f-1a3e-4589-998a-9fdca73dd2ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contractor.body
+    - field.field.node.contractor.field_policies
+    - node.type.contractor
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.contractor.default
+targetEntityType: node
+bundle: contractor
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_policies:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

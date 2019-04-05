@@ -1,0 +1,22 @@
+uuid: cc6366d4-a146-4cc1-b3d7-768f4c95f473
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_1
+    - node.type.page
+  module:
+    - text
+id: node.page.field_custom_1
+field_name: field_custom_1
+entity_type: node
+bundle: page
+label: 'Custom 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

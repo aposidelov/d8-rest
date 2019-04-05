@@ -1,0 +1,19 @@
+uuid: d6c1b4ef-0059-4b40-9ba5-fe1d91725f6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_custom_4
+field_name: field_custom_4
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

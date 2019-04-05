@@ -1,0 +1,9 @@
+name: BT Product
+description: Creates 'BT Product' content entity
+core: 8.x
+version: 1.0
+type: module
+package: Custom
+dependencies:
+  - drupal:options
+  - drupal:user

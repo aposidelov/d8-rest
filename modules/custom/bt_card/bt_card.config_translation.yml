@@ -1,0 +1,5 @@
+bt_card.data:
+  title: 'BT Card settings'
+    base_route_name: bt_card.settings.trans
+    names:
+      - bt_card.settings

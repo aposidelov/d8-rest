@@ -1,0 +1,17 @@
+# This defines our example page's path to the routing system.
+bt_plugin.description:
+  path: '/bt_plugin'
+  defaults:
+    _controller: '\Drupal\bt_plugin\Controller\BtPluginController::description'
+    _title: 'Bt Plugin type'
+  requirements:
+    _permission: 'access content'
+bt_plugin.simple_form:
+  path: '/bt_plugin/simple_form'
+  defaults:
+    _form: 'Drupal\bt_plugin\Form\SimpleForm'
+    _title: 'BT Plugin simple form'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,21 @@
+uuid: 51e07d0a-02cd-4d67-9dea-90e11cc53d80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_active_range
+    - paragraphs.paragraphs_type.policy
+  module:
+    - datetime_range
+id: paragraph.policy.field_active_range
+field_name: field_active_range
+entity_type: paragraph
+bundle: policy
+label: 'Active Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

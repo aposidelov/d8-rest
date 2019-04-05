@@ -1,0 +1,24 @@
+bt_card.list:
+  title: 'BT Cards'
+  description: 'BT Cards'
+  parent: system.admin_config_development
+  route_name: bt_card.list
+  weight: 100
+bt_card.list_drag:
+  title: 'BT Cards (d)'
+  description: 'BT Cards (draggable)'
+  parent: system.admin_config_development
+  route_name: bt_card.list_drag
+  weight: 100
+bt_card.add_form:
+  title: 'BT Card'
+  description: 'Allows to add new Cards'
+  parent: system.admin_config_development
+  route_name: bt_card.add_form
+  weight: 101
+bt_card.settings_form:
+  title: 'BT Card Settings'
+  description: 'Allows to manage settings'
+  parent: system.admin_config_development
+  route_name: bt_card.settings_form
+  weight: 102

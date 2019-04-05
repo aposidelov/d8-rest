@@ -1,0 +1,21 @@
+uuid: b4ff90b8-ce14-4f7f-82a2-0ede8d3a54c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_policy_effective_date
+    - paragraphs.paragraphs_type.policy
+  module:
+    - datetime
+id: paragraph.policy.field_policy_effective_date
+field_name: field_policy_effective_date
+entity_type: paragraph
+bundle: policy
+label: 'Effective Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

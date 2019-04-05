@@ -1,0 +1,5 @@
+bt_custom.data:
+  title: 'BT Custom settings'
+    base_route_name: bt_custom.settings.trans
+    names:
+      - bt_custom.settings

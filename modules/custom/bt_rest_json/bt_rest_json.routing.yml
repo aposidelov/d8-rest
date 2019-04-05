@@ -1,0 +1,9 @@
+bt_rest_json.simple_form:
+  path: '/bt_rest_json/simple_form'
+  defaults:
+    _form: 'Drupal\bt_rest_json\Form\SimpleForm'
+    _title: 'BT Rest JSON simple form'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE

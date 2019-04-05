@@ -1,0 +1,22 @@
+uuid: 3fa2aaa9-eeff-4a1a-abef-0bd050dec172
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.movie
+  module:
+    - country
+id: node.movie.field_country
+field_name: field_country
+entity_type: node
+bundle: movie
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selectable_countries: {  }
+field_type: country

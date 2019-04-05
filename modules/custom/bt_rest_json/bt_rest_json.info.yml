@@ -1,0 +1,6 @@
+name: BT Rest JSON
+description: JSON api tester
+core: 8.x
+version: 1.0
+type: module
+package: Custom

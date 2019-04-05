@@ -1,0 +1,23 @@
+uuid: 7cab995a-1cc6-410f-a6f3-2cb6820e0daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.person
+  module:
+    - feeds
+id: node.person.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: person
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

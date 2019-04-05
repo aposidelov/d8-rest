@@ -1,0 +1,17 @@
+uuid: 4f2e2cce-2e16-460f-95d4-3c289e9eedab
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Movie
+type: movie
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

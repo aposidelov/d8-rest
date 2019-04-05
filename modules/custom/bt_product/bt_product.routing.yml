@@ -1,0 +1,74 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.bt_product.canonical:
+  path: '/bt_product/{bt_product}'
+  defaults:
+    # Calls the view controller, defined in the annotation of the contact
+    # entity. This marks this route as belonging to this entity type.
+    _entity_view: 'bt_product'
+    _title: 'Bt Product content'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix ('view')
+    # as the $operation parameter to checkAccess().
+    _entity_access: 'bt_product.view'
+
+entity.bt_product.collection:
+  path: '/bt_product/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'bt_product'
+    _title: 'Bt Product list'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view bt product entity'
+
+bt_product.bt_product_add:
+  path: '/bt_product/add'
+  defaults:
+    # Calls the form.add controller, defined in the contact entity.
+    _entity_form: bt_product.default
+    _title: 'Add bt product'
+  requirements:
+    # Use the entity's access controller. _entity_create_access tells the router
+    # to use the access controller's checkCreateAccess() method instead of
+    # checkAccess().
+    _entity_create_access: 'bt_product'
+
+entity.bt_product.edit_form:
+  path: '/bt_product/{bt_product}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the contact entity.
+    _entity_form: bt_product.default
+    _title: 'Edit bt product'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('update') as the $operation parameter to checkAccess().
+    _entity_access: 'bt_product.update'
+
+entity.bt_product.delete_form:
+  path: '/bt_product/{bt_product}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: bt_product.delete
+    _title: 'Delete bt product'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('delete') as the $operation parameter to checkAccess().
+    _entity_access: 'bt_product.delete'
+
+bt_product.bt_product_settings:
+  path: '/admin/structure/bt_product_settings'
+  defaults:
+    _form: '\Drupal\bt_product\Form\BtProductSettingsForm'
+    _title: 'Bt Product settings'
+  requirements:
+    _permission: 'administer bt product entity'
+bt_product.simple_form:
+  path: '/bt_product/simple_form'
+  defaults:
+    _form: 'Drupal\bt_product\Form\SimpleForm'
+    _title: 'BT Product simple form'
+  requirements:
+    _permission: 'administer site configuration'

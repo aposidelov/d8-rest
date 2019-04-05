@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+bt_product.settings_tab:
+  route_name: bt_product.bt_product_settings
+  title: Settings
+  base_route: bt_product.bt_product_settings
+
+bt_product.view:
+  route_name: entity.bt_product.canonical
+  base_route: entity.bt_product.canonical
+  title: View
+
+bt_product.page_edit:
+  route_name: entity.bt_product.edit_form
+  base_route: entity.bt_product.canonical
+  title: Edit
+
+bt_product.delete_confirm:
+  route_name:  entity.bt_product.delete_form
+  base_route:  entity.bt_product.canonical
+  title: Delete
+  weight: 10
