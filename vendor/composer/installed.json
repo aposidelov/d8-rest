@@ -1208,17 +1208,17 @@
     },
     {
         "name": "consolidation/site-process",
-        "version": "2.0.1",
-        "version_normalized": "2.0.1.0",
+        "version": "2.0.2",
+        "version_normalized": "2.0.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/consolidation/site-process.git",
-            "reference": "d923bbf8843f4b273733db5912198b7dba0f236d"
+            "reference": "8957b9b3f4d48c183b7b11a29089d52875442e2f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/consolidation/site-process/zipball/d923bbf8843f4b273733db5912198b7dba0f236d",
-            "reference": "d923bbf8843f4b273733db5912198b7dba0f236d",
+            "url": "https://api.github.com/repos/consolidation/site-process/zipball/8957b9b3f4d48c183b7b11a29089d52875442e2f",
+            "reference": "8957b9b3f4d48c183b7b11a29089d52875442e2f",
             "shasum": ""
         },
         "require": {
@@ -1236,7 +1236,7 @@
             "phpunit/phpunit": "^6",
             "squizlabs/php_codesniffer": "^2.8"
         },
-        "time": "2019-04-02T18:47:44+00:00",
+        "time": "2019-04-05T20:16:00+00:00",
         "type": "library",
         "extra": {
             "scenarios": {
